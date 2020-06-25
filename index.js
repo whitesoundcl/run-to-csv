@@ -6,7 +6,7 @@
 
 const papa = require("papaparse");
 const fs = require("fs");
-const TARGET = 10;
+const TARGET = 1000;
 const FILENAME = "runs.csv";
 
 // Generates a new run
@@ -40,7 +40,7 @@ for (let i = 0; i < TARGET; i++) {
     })
   )
     run = generateRun();
-  runList.push(i === 0 ? ["Ruts", "Instituciones"] : [generateRun()]);
+  runList.push(i === 0 ? ["Ruts"] : [generateRun()]);
 }
 
 const csv = papa.unparse(runList);
